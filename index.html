@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic Tac Toe</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        
+        table, td {
+            border-collapse: collapse;
+            white-space: nowrap;
+            min-width: 10px;
+            vertical-align: top;
+            width: auto;
+        }
+
+
+        h1 {
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            height: 30%;
+            width: 45%;
+            background-color: gray;
+            border-radius: 15px;
+            table-layout: fixed;
+        }  
+
+        td {
+            font-weight:bold;
+            font-size: 30px;
+            padding: 10%;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        td:hover {
+            background-color: rgb(204, 204, 204);
+        }
+
+        tr {
+            max-width: 1px;
+            width: 1px;
+        }
+
+        #row2 {
+            border-top: 4px solid white;
+            border-bottom: 4px solid white;
+        }
+
+        #one, #four, #seven {
+            border-right: 4px solid white;
+        }
+
+        #two, #five, #eight {
+            border-right: 4px solid white;
+        }
+
+
+
+        @media only screen and (min-width: 900px) {
+            .table-head {font-size: 40px}
+            td {font-size: 65px; width: 5px; min-width: 5px;}
+            table {width: 30%;}
+            h1 {font-size: 50px}
+        }
+
+        button {
+            background-color: rgb(52, 227, 233);
+            padding: 1%;
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            line-height: 65px;
+            width: 20%;
+            font-size:25px;
+            border-radius: 10%;
+            font-family: sans-serif;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        button:hover {
+            background-color: rgb(5, 112, 161);
+        }
+
+       #container {
+           display: flex;
+           justify-content: center;
+           height: auto;
+           overflow-x: auto;
+       }
+
+       body {
+           background-color: gray;
+       }
+
+        #buttonContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+
+    </head>
+    <body>
+        <h1>Tic Tac Toe</h1>
+        <div id="container">
+        <table id="gameboard">
+         <tr>
+             <td id='one' style="color: gray" onClick="play(this), gameOver()">
+               Tic
+             </td>
+             <td id='two' onClick="play(this), gameOver()">
+            </td>
+            
+            <td id='three'  onClick="play(this), gameOver()">
+            </td>
+
+         </tr>
+         <tr id="row2">
+            <td  id='four' onClick="play(this), gameOver()">
+            </td>
+
+            <td id='five' style="color: gray"  onClick="play(this), gameOver()">
+                Tac
+           </td>
+
+           <td id='six' onClick="play(this), gameOver()">
+           </td>
+
+        </tr>
+        <tr id="row3">
+            <td  id='seven' onClick="play(this), gameOver()">
+            </td>
+
+            <td id='eight'  onClick="play(this), gameOver()">
+           </td>
+
+           <td id='nine' style="color: gray" onClick="play(this), gameOver()">
+               Toe
+           </td>
+
+        </tr>
+        </table>
+    </div>
+    <div id="buttonContainer">
+    <button onClick="reset()">Reset</button>
+    </div>
+        <script type="text/javascript" src="./app.js"></script>
+    </body>
+</html>
+
